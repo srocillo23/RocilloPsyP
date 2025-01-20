@@ -19,10 +19,10 @@ class Chef extends Thread {
         
         try {
             // Sleeps for cooking time
-            Thread.sleep(cookingTime * 1000L); // Seconds to miliseconds
+            Thread.sleep(cookingTime * 1000L); // Seconds to milisecondso
         } catch (InterruptedException e) {
             System.out.println(chefName + " was interrupted while cooking order: " + order);
-            Thread.currentThread().interrupt();
+            Thread.currentThread().interrupt(); // Restablecer el estado de interrupción
         }
         
         System.out.println(chefName + " finished cooking order: " + order + " ☑");
